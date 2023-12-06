@@ -48,3 +48,14 @@ body {
   background: url("https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern-dark.svg");
   background-color: #0373C6;
 }
+
+.container {
+  width: 83.333333%;
+  margin-inline: auto;
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: 91.666667%;
+  }
+}

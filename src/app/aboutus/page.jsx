@@ -14,7 +14,7 @@ const AboutUs = () => {
           <div className="my-2">
             <Heading4 className="text-blue-600 capitalize">About Us</Heading4>
           </div>
-          <div className="my-4 rounded-lg">
+          <div className="my-4 rounded-lg shadow bg-[#F9FAFB] p-4">
             {/*shadow-lg p-6 */}
 
             <div className="mb-3 text-black dark:text-black first-letter:text-blue-600 sm:first-letter:text-4xl sm:first-letter:font-bold first-letter:ml-4 first-letter:float-start text-justify">
@@ -61,7 +61,7 @@ const AboutUs = () => {
         </Container>
       </section>
 
-      <section className="py-5 bg-[#F9FAFB]">
+      <section className="py-5 lg:bg-[#F9FAFB]">
         <Container>
           <div className="my-2">
             <Heading4 className="text-blue-600 capitalize">

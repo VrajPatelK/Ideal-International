@@ -117,8 +117,8 @@ const primaryMenu = [
     url: "/aboutus",
   },
   {
-    name: "Policies",
-    url: "/policies",
+    name: "Terms & Conditions",
+    url: "/terms-conditions",
   },
   {
     name: "Services",
@@ -129,6 +129,7 @@ const primaryMenu = [
     url: "/contact",
   },
 ];
+
 const followUsMenu = [
   {
     name: "Facebook",

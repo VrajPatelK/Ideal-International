@@ -154,8 +154,8 @@ export default function Home() {
                     duration={data.duration}
                     text={data.text}
                     prefix={data.prefix}
-                    cntClass="text-blue-600 text-2xl"
-                    txtClass="text-lg"
+                    cntclassName="text-blue-600 text-2xl"
+                    txtclassName="text-lg"
                     className="text-center"
                   />
                 </div>

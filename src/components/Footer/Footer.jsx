@@ -65,8 +65,8 @@ const Footer = () => {
                 </h2>
                 <ul className="text-gray-500 dark:text-gray-400 font-medium">
                   <li className="mb-4">
-                    <Link href="/policies" className="hover:underline">
-                      Privacy Policy
+                    <Link href={primaryMenu[2].url} className="hover:underline">
+                      {primaryMenu[2].name}
                     </Link>
                   </li>
                 </ul>
