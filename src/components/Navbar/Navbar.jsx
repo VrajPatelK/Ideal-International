@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="bg-white border-gray-200 dark:bg-gray-900">
+      <nav className="bg-white border-gray-200 dark:bg-gray-900 w-full z-50 navbar-shadow">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 relative">
           <Link
             href="http://127.0.0.1:3000/"
