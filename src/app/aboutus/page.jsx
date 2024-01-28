@@ -2,9 +2,11 @@ import Container from "@/layouts/Container";
 import Heading4 from "@/layouts/Heading4";
 import React from "react";
 import PortfolioCard from "@/components/PortfolioCard/page";
-import { HandyMen, DUMMY_SERVICES } from "@/data/data";
+import { HandyMen, SERVICES } from "@/data/data";
 import Card from "@/components/Card/page";
 import BlockQuote from "@/components/BlockQuote/BlockQuote";
+import { getServcies } from "../Helpers/helpers";
+import Link from "next/link";
 
 const AboutUs = () => {
   return (
@@ -14,39 +16,56 @@ const AboutUs = () => {
           <div className="my-2">
             <Heading4 className="text-blue-600 capitalize">About Us</Heading4>
           </div>
-          <div className="my-4 rounded-lg shadow bg-[#F9FAFB] p-4">
-            {/*shadow-lg p-6 */}
-
-            <div className="mb-3 text-black dark:text-black first-letter:text-blue-600 sm:first-letter:text-4xl sm:first-letter:font-bold first-letter:ml-4 first-letter:float-start text-justify">
-              <span className="sm:ml-10"></span>
-              We are a plumbing agencys from water counseling. Lorem ipsum dolor
-              sit amet consectetur adipisicing elit. Est ullam temporibus
-              itaque, culpa facilis minus! Eaque eum consectetur neque deserunt?
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-              aspernatur aliquid, explicabo id aut doloremque soluta maxime vero
-              dignissimos atque iste. Distinctio, modi eligendi. Illo,
-              aspernatur perferendis. Praesentium magnam dolores ipsam ea
-              aperiam aut aspernatur voluptas placeat, neque dolorum possimus
-              animi nemo maiores nesciunt impedit quis iste accusamus
-              accusantium eaque.
-            </div>
-            <div className="mb-3 text-black dark:text-black text-justify">
-              <span className="sm:ml-10"></span>
-              At{" "}
-              <span className="text-blue-600 font-bold">
-                [Your Company Name]
-              </span>
-              , we don't just fix pipes; we mend connections and build trust.
-              With a commitment to excellence, our team of skilled plumbers is
-              dedicated to delivering top-notch services that go beyond the
-              surface. We believe in the power of reliable plumbing to transform
-              spaces and improve lives. From leaky faucets to intricate
-              installations, we handle every job with precision,
-              professionalism, and a personal touch. Your satisfaction is not
-              just our goal; it's our standard. Welcome to a plumbing experience
-              where quality meets care, and your peace of mind flows freely."
-              Feel free to customize it based on your company's values, mission,
-              and unique selling points.
+          <div className="mb-4 py-4">
+            <div className="rounded-lg shadow bg-[#F9FAFB] p-10">
+              <div className="mb-3 text-black dark:text-black first-letter:text-blue-600 sm:first-letter:text-4xl sm:first-letter:font-bold first-letter:ml-4 first-letter:float-start text-justify">
+                <span className="sm:ml-10"></span>
+                Welcome to{" "}
+                <span className="text-blue-600 font-semibold">
+                  [company_name]
+                </span>
+                , where we're on a mission to transform ordinary bathrooms into
+                extraordinary havens. We're genuinely excited to welcome you
+                aboard this journey with us as we strive to redefine the very
+                essence of bathroom experiences.
+              </div>
+              <div className="mb-3 text-black dark:text-black text-justify">
+                <span className="sm:ml-10"></span>
+                In the realm of{" "}
+                <span className="text-blue-600 font-semibold">
+                  [company_name]
+                </span>
+                , we view bathrooms as more than mere functional spaces; they're
+                sacred sanctuaries where you kick off and wind down each day,
+                deserving of a touch of luxury and comfort. Our commitment is
+                rooted in elevating your everyday experience by seamlessly
+                blending unparalleled opulence with unmatched functionality. We
+                want your bathroom to be a place that not only meets your
+                practical needs but also becomes a source of indulgence and
+                relaxation.
+              </div>
+              <div className="mb-3 text-black dark:text-black text-justify">
+                <span className="sm:ml-10"></span>
+                Imagine stepping into a world where every aspect of your
+                bathroom is not just stunning but also superior in its
+                functionality.
+                <span className="text-blue-600 font-semibold">
+                  [company_name]
+                </span>{" "}
+                is more than a design-centric entity; it's a conduit for turning
+                your dream bathroom into a tangible reality. Here, every minute
+                detail, regardless of its size, is meticulously considered and
+                perfected with you in mind. We invite you to embark on the
+                [company_name] experience with us, where together, we can
+                transform your bathroom into a personal haven of indulgence,
+                comfort, and style. Here's to making every day a bit more
+                indulgent!
+              </div>
+              The{" "}
+              <span className="text-blue-600 font-semibold">
+                [company_name]
+              </span>{" "}
+              Team
             </div>
           </div>
         </Container>
@@ -54,10 +73,7 @@ const AboutUs = () => {
 
       <section className="border-blue-400 my-20 py-10 bg-[${bg1}]">
         <Container>
-          <BlockQuote>
-            Flowing Solutions, Lasting Impressions: Crafting Excellence in Every
-            Pipe, Every Home.
-          </BlockQuote>
+          <BlockQuote>[company name] - Crafting Your Dream Bathroom</BlockQuote>
         </Container>
       </section>
 
@@ -70,7 +86,7 @@ const AboutUs = () => {
           </div>
           <div className="my-4">
             <div className="grid gap-5 grid-flow-row grid-cols-1 sm:grid-cols-2 my-10">
-              {DUMMY_SERVICES.map((service, index) => {
+              {getServcies(8, 16).map((service, index) => {
                 return (
                   <Card
                     key={index}
@@ -81,6 +97,16 @@ const AboutUs = () => {
                   />
                 );
               })}
+            </div>
+            <div className="flex justify-center items-center mt-10">
+              <Link href={"/services"} className="">
+                <button
+                  type="button"
+                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-sm text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 btn-shadow"
+                >
+                  See More ...
+                </button>
+              </Link>
             </div>
           </div>
         </Container>

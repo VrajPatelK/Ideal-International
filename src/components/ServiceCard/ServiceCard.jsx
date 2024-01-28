@@ -5,7 +5,7 @@ const ServiceCard = (props) => {
   return (
     <div
       className={
-        "max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 " +
+        "card-shadow p-6 bg-white justify-self-stretch rounded-lg dark:bg-gray-800 dark:border-gray-700 " +
         props.className
       }
     >

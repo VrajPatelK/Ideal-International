@@ -7,7 +7,8 @@ import Counter from "@/components/Counter/Counter";
 
 import home01 from "../../public/home-01.png";
 import home02 from "../../public/home-02.png";
-import { DUMMY_SERVICES, STATICS } from "@/data/data";
+import { STATICS } from "@/data/data";
+import { getServcies } from "./Helpers/helpers";
 
 export default function Home() {
   return (
@@ -16,13 +17,18 @@ export default function Home() {
         <Container>
           <div className="rounded-lg lg:grid lg:grid-cols-2 lg:gap-3 pt-12 pb-5 px-5">
             <div className="col-span-1 py-5 ml-auto">
-              <div className="text-left font-bold sm:text-6xl text-2xl w-fit leading-tight">
-                Plumbing services we've got the fix!
+              <div className="text-left font-bold sm:text-5xl text-2xl w-fit leading-tight">
+                Smart, Stylish,
+                <br />
+                <span className="text-blue-600">Sustainable</span>
               </div>
               <div className="mt-5">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit
-                saepe dolorum, similique, dolorem culpa porro commodi adipisci
-                error consequatur pariatur hic sequi aut?
+                Redefining Bathware for Modern Living. Embrace the future of
+                bathrooms with our smart, stylish, and eco-friendly
+                solutions.Discover a range of styles and personalized solutions
+                that make every bathroom uniquely yours.From vision to reality,
+                our services redefine the art of bathing, focusing on your
+                comfort and style.
               </div>
               <div className="mt-5">
                 <Link href={"/contact"}>
@@ -64,7 +70,7 @@ export default function Home() {
         <div className="my-4 py-4">
           <Container>
             <div className="grid gap-5 grid-flow-row grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 my-3">
-              {DUMMY_SERVICES.map((service, index) => {
+              {getServcies(0, 6)?.map((service, index) => {
                 return (
                   <ServiceCard
                     key={index}
@@ -77,14 +83,24 @@ export default function Home() {
               })}
             </div>
           </Container>
+          <div className="flex justify-center items-center mt-10">
+            <Link href={"/services"} className="">
+              <button
+                type="button"
+                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-sm text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 btn-shadow"
+              >
+                See More ...
+              </button>
+            </Link>
+          </div>
         </div>
       </section>
 
       <section className="my-4 bg-[#F9FAFB] py-4">
         <Container>
           <div className="xl:block hidden font-medium w-10/12 mx-auto md:text-6xl mb-5 md:leading-snug text-gray-900">
-            <p className="mr-auto w-fit">We build stunning best</p>
-            <p className="ml-auto w-fit"> handyman services agency</p>
+            <p className="mr-auto w-fit">We provide stunning </p>
+            <p className="ml-auto w-fit"> best bathware services</p>
           </div>
           <div className="text-left font-medium text-2xl sm:text-4xl md:text-5xl mb-5 leading-10 md:leading-snug block xl:hidden text-gray-900">
             We build stunning best handyman services agency
@@ -102,26 +118,27 @@ export default function Home() {
             <div className="col-span-2 flex">
               <div className="lg:w-2/3">
                 <div className="my-2">
-                  <Heading4 className="text-blue-600">
-                    We have discounts & coupons
+                  <Heading4>
+                    <span className="text-blue-600">
+                      Upgrade Your Daily Routine:
+                    </span>{" "}
+                    <span className="text-gray-700">
+                      Experience Exceptional Bathrooms Like Never Before!
+                    </span>
                   </Heading4>
                 </div>
-                <div className="mt-5">
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don't look
-                  even slightly believable
-                </div>
-
-                <div className="mt-10 shadow p-3 bg-blue-500 rounded-lg border-blue-700 flex gap-5 align-middle">
-                  <div className="w-auto p-4 h-auto border-r-2 bg-blue-500 text-white flex sm:text-2xl text-md">
-                    <span className="m-auto text-center">
-                      500$ <br /> Bonus
-                    </span>
-                  </div>
-                  <span className="text-white font-semibold sm:text-2xl text-md h-fit my-auto">
-                    Crack-free plumbing that won't break the bank.
-                  </span>
+                <div className="mt-5 text-justify">
+                  Step into a world where your everyday moments become
+                  extraordinary. We're here to transform your bathroom into a
+                  stunning haven of luxury and practicality. Imagine designs
+                  that catch your eye and flawless installations that turn each
+                  element into a work of art. We're not just about looks – we're
+                  about making your daily routines feel like indulgent
+                  experiences. Our bathware services redefine what a truly
+                  exceptional bathroom should be. It's where style and quality
+                  meet to create a bathroom that's not just beautiful but also
+                  functional. Join us on a journey where your dream bathroom
+                  becomes a reality, and every detail is perfected just for you.
                 </div>
               </div>
 

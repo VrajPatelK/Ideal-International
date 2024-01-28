@@ -59,3 +59,21 @@ body {
     width: 91.666667%;
   }
 }
+
+.btn-shadow {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.btn-shadow:hover {
+  box-shadow: none;
+}
+
+.card-shadow {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+
+.card-shadow:hover {
+  box-shadow: none;
+}
