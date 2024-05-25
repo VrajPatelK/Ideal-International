@@ -18,7 +18,7 @@ const AboutUs = () => {
           </div>
           <div className="mb-4 py-4">
             <div className="rounded-lg shadow bg-[#F9FAFB] p-10">
-              <div className="mb-3 text-black dark:text-black first-letter:text-blue-600 sm:first-letter:text-4xl sm:first-letter:font-bold first-letter:ml-4 first-letter:float-start text-justify">
+              <div className="mb-3 text-black first-letter:text-blue-600 sm:first-letter:text-4xl sm:first-letter:font-bold first-letter:ml-4 first-letter:float-start text-justify">
                 <span className="sm:ml-10"></span>
                 Welcome to{" "}
                 <span className="text-blue-600 font-semibold">
@@ -29,7 +29,7 @@ const AboutUs = () => {
                 aboard this journey with us as we strive to redefine the very
                 essence of bathroom experiences.
               </div>
-              <div className="mb-3 text-black dark:text-black text-justify">
+              <div className="mb-3 text-black text-justify">
                 <span className="sm:ml-10"></span>
                 In the realm of{" "}
                 <span className="text-blue-600 font-semibold">
@@ -44,7 +44,7 @@ const AboutUs = () => {
                 practical needs but also becomes a source of indulgence and
                 relaxation.
               </div>
-              <div className="mb-3 text-black dark:text-black text-justify">
+              <div className="mb-3 text-black text-justify">
                 <span className="sm:ml-10"></span>
                 Imagine stepping into a world where every aspect of your
                 bathroom is not just stunning but also superior in its
@@ -102,7 +102,7 @@ const AboutUs = () => {
               <Link href={"/services"} className="">
                 <button
                   type="button"
-                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-sm text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 btn-shadow"
+                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-sm text-sm px-5 py-2.5 text-center"
                 >
                   See More ...
                 </button>

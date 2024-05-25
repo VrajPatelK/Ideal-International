@@ -30,10 +30,10 @@ const TermsConditions = () => {
                 );
               })}
               <div>
-                <h2 className="mt-10 mb-3 text-2xl font-semibold text-blue-600 dark:text-white">
+                <h2 className="mt-10 mb-3 text-2xl font-semibold text-blue-600">
                   Conclusion
                 </h2>
-                <div className="text-gray-800 list-none list-inside dark:text-gray-400">
+                <div className="text-gray-800 list-none list-inside">
                   By engaging with{" "}
                   <span className="text-blue-600 font-semibold">
                     [company_name]

@@ -14,15 +14,15 @@ const Modal = (props) => {
     >
       <div className="relative w-full max-w-7xl max-h-full">
         {/* <!-- Modal content --> */}
-        <div className="relative bg-blue-600 rounded-lg dark:bg-gray-700">
+        <div className="relative bg-blue-600 rounded-lg">
           {/* <!-- Modal header --> */}
-          <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-            <h3 className="text-xl font-medium text-white dark:text-white">
+          <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t">
+            <h3 className="text-xl font-medium text-white">
               Plumbing
             </h3>
             <button
               type="button"
-              className="text-white bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+              className="text-white bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center"
               data-modal-hide="extralarge-modal"
               onClick={() => props.onCloseModal()}
             >
@@ -51,9 +51,9 @@ const Modal = (props) => {
           </div>
 
           {/* <!-- Modal footer --> */}
-          <div className="flex items-center p-4 md:p-5 space-x-3 rtl:space-x-reverse border-t border-gray-200 rounded-b dark:border-gray-600">
+          <div className="flex items-center p-4 md:p-5 space-x-3 rtl:space-x-reverse border-t border-gray-200 rounded-b">
             <div className="sm:flex sm:items-center sm:justify-between">
-              <span className="text-sm text-gray-100 sm:text-center dark:text-gray-400">
+              <span className="text-sm text-gray-100 sm:text-center">
                 <b>©</b> 2023{" "}
                 <Link href="http://127.0.0.1:3000/" className="hover:underline">
                   [plumbing]™

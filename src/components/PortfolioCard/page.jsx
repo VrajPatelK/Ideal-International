@@ -10,7 +10,7 @@ const PortfolioCard = (props) => {
     <div
       className={
         classes +
-        " w-full max-w-sm rounded-lg dark:bg-gray-800 py-5 bg-[#F9FAFB] shadow-sm"
+        " w-full max-w-sm rounded-lg py-5 bg-[#F9FAFB] shadow-sm"
       }
     >
       <div className="flex flex-col items-center">
@@ -27,10 +27,10 @@ const PortfolioCard = (props) => {
             alt={props.name}
           />
         )}
-        <h5 className="mb-1 text-xl font-semibold text-blue-900 dark:text-white">
+        <h5 className="mb-1 text-xl font-semibold text-blue-900">
           {props.name}
         </h5>
-        <span className="text-sm font-medium text-gray-500 dark:text-gray-400">
+        <span className="text-sm font-medium text-gray-500">
           {props.role}
         </span>
       </div>

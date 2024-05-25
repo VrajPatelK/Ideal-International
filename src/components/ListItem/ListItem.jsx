@@ -3,10 +3,10 @@ import React from "react";
 const ListItem = ({ children, heading = "" }) => {
   return (
     <div className="my-5">
-      <h2 className="mb-2 text-lg font-semibold text-gray-800 dark:text-white">
+      <h2 className="mb-2 text-lg font-semibold text-gray-800">
         {heading}
       </h2>
-      <ul className="text-gray-500 list-none list-inside dark:text-gray-400 pl-10">
+      <ul className="text-gray-500 list-none list-inside pl-10">
         <li>{children}</li>
       </ul>
     </div>
