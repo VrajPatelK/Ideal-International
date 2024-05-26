@@ -1,9 +1,8 @@
+import ServiceCard from "@/components/ServiceCard/ServiceCard";
 import Container from "@/layouts/Container";
 import Heading4 from "@/layouts/Heading4";
-import React from "react";
 import { getServcies } from "../Helpers/helpers";
-import ServiceCard from "@/components/ServiceCard/ServiceCard";
-import Link from "next/link";
+import { openGraphImage } from "../shared-metadata";
 
 const Services = () => {
   return (
@@ -37,3 +36,10 @@ const Services = () => {
 };
 
 export default Services;
+
+export async function generateMetadata({ params, searchParams }, parent) {
+  return {
+    title: `${openGraphImage.title} - Services`,
+    description: openGraphImage.description,
+  };
+}

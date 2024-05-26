@@ -1,8 +1,10 @@
 "use client";
-import { useState } from "react";
-import NavItems from "./NavItems";
+import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import Modal from "../Modal/Modal";
+import NavItems from "./NavItems";
+import Logo from "../Logo";
 
 const Navbar = () => {
   //
@@ -16,10 +18,8 @@ const Navbar = () => {
             href="http://127.0.0.1:3000/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            <img src="/logo.png" className="w-12 h-auto" alt="logo" />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap">
-              Plumbing
-            </span>
+            <Image src="/logo.png" width={48} height={0} alt="logo" />
+            <Logo />
           </Link>
 
           <button

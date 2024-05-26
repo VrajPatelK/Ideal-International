@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    remotePatterns: [{ hostname: "st3.depositphotos.com" }],
+  },
+};
 
 module.exports = nextConfig;

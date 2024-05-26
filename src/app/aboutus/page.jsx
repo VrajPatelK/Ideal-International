@@ -1,12 +1,13 @@
+import BlockQuote from "@/components/BlockQuote/BlockQuote";
+import CName from "@/components/CName";
+import Card from "@/components/Card/page";
+import PortfolioCard from "@/components/PortfolioCard/page";
+import { HandyMen } from "@/data/data";
 import Container from "@/layouts/Container";
 import Heading4 from "@/layouts/Heading4";
-import React from "react";
-import PortfolioCard from "@/components/PortfolioCard/page";
-import { HandyMen, SERVICES } from "@/data/data";
-import Card from "@/components/Card/page";
-import BlockQuote from "@/components/BlockQuote/BlockQuote";
-import { getServcies } from "../Helpers/helpers";
 import Link from "next/link";
+import { getServcies } from "../Helpers/helpers";
+import { openGraphImage } from "../shared-metadata";
 
 const AboutUs = () => {
   return (
@@ -20,52 +21,37 @@ const AboutUs = () => {
             <div className="rounded-lg shadow bg-[#F9FAFB] p-10">
               <div className="mb-3 text-black first-letter:text-blue-600 sm:first-letter:text-4xl sm:first-letter:font-bold first-letter:ml-4 first-letter:float-start text-justify">
                 <span className="sm:ml-10"></span>
-                Welcome to{" "}
-                <span className="text-blue-600 font-semibold">
-                  [company_name]
-                </span>
-                , where we're on a mission to transform ordinary bathrooms into
-                extraordinary havens. We're genuinely excited to welcome you
-                aboard this journey with us as we strive to redefine the very
-                essence of bathroom experiences.
+                Welcome to <CName />, where we&apos;re on a mission to transform
+                ordinary bathrooms into extraordinary havens. We&apos;re
+                genuinely excited to welcome you aboard this journey with us as
+                we strive to redefine the very essence of bathroom experiences.
               </div>
               <div className="mb-3 text-black text-justify">
                 <span className="sm:ml-10"></span>
-                In the realm of{" "}
-                <span className="text-blue-600 font-semibold">
-                  [company_name]
-                </span>
-                , we view bathrooms as more than mere functional spaces; they're
-                sacred sanctuaries where you kick off and wind down each day,
-                deserving of a touch of luxury and comfort. Our commitment is
-                rooted in elevating your everyday experience by seamlessly
-                blending unparalleled opulence with unmatched functionality. We
-                want your bathroom to be a place that not only meets your
-                practical needs but also becomes a source of indulgence and
-                relaxation.
+                In the realm of <CName />, we view bathrooms as more than mere
+                functional spaces; they&apos;re sacred sanctuaries where you
+                kick off and wind down each day, deserving of a touch of luxury
+                and comfort. Our commitment is rooted in elevating your everyday
+                experience by seamlessly blending unparalleled opulence with
+                unmatched functionality. We want your bathroom to be a place
+                that not only meets your practical needs but also becomes a
+                source of indulgence and relaxation.
               </div>
               <div className="mb-3 text-black text-justify">
                 <span className="sm:ml-10"></span>
                 Imagine stepping into a world where every aspect of your
                 bathroom is not just stunning but also superior in its
                 functionality.
-                <span className="text-blue-600 font-semibold">
-                  [company_name]
-                </span>{" "}
-                is more than a design-centric entity; it's a conduit for turning
-                your dream bathroom into a tangible reality. Here, every minute
-                detail, regardless of its size, is meticulously considered and
-                perfected with you in mind. We invite you to embark on the
-                [company_name] experience with us, where together, we can
-                transform your bathroom into a personal haven of indulgence,
-                comfort, and style. Here's to making every day a bit more
-                indulgent!
+                <CName /> is more than a design-centric entity; it&apos;s a
+                conduit for turning your dream bathroom into a tangible reality.
+                Here, every minute detail, regardless of its size, is
+                meticulously considered and perfected with you in mind. We
+                invite you to embark on the [company_name] experience with us,
+                where together, we can transform your bathroom into a personal
+                haven of indulgence, comfort, and style. Here&apos;s to making
+                every day a bit more indulgent!
               </div>
-              The{" "}
-              <span className="text-blue-600 font-semibold">
-                [company_name]
-              </span>{" "}
-              Team
+              The <CName /> Team
             </div>
           </div>
         </Container>
@@ -146,3 +132,10 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
+
+export async function generateMetadata({ params, searchParams }, parent) {
+  return {
+    title: `${openGraphImage.title} - About Us`,
+    description: openGraphImage.description,
+  };
+}

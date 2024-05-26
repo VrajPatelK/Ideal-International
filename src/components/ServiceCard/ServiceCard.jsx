@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 
 const ServiceCard = (props) => {
@@ -10,7 +9,7 @@ const ServiceCard = (props) => {
       }
     >
       <div>
-        <img
+        <Image
           src={props.imageUrl}
           width={50}
           height={60}

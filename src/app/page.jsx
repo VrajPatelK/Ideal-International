@@ -1,14 +1,15 @@
-import Container from "@/layouts/Container";
-import Link from "next/link";
-import Image from "next/image";
-import Heading4 from "@/layouts/Heading4";
-import ServiceCard from "@/components/ServiceCard/ServiceCard";
 import Counter from "@/components/Counter/Counter";
+import ServiceCard from "@/components/ServiceCard/ServiceCard";
+import Container from "@/layouts/Container";
+import Heading4 from "@/layouts/Heading4";
+import Image from "next/image";
+import Link from "next/link";
 
+import { STATICS } from "@/data/data";
 import home01 from "../../public/home-01.png";
 import home02 from "../../public/home-02.png";
-import { STATICS } from "@/data/data";
 import { getServcies } from "./Helpers/helpers";
+import { openGraphImage } from "./shared-metadata";
 
 export default function Home() {
   return (
@@ -45,6 +46,7 @@ export default function Home() {
               <Image
                 src={home01}
                 alt="home01"
+                width={0}
                 className="border w-auto sm:h-[70vh] rounded-lg shadow-md ml-auto"
               />
               <div className="bg-blue-700 text-white font-bold rounded-[50%] flex w-[130px] h-[130px] absolute -right-20 bottom-10 border-white border-4">
@@ -111,7 +113,8 @@ export default function Home() {
               <Image
                 src={home02}
                 alt="home02"
-                className="w-auto sm:h-[60vh] rounded-lg shadow-md mr-auto"
+                width={0}
+                className="sm:h-[60vh] rounded-lg shadow-md mr-auto"
               />
             </div>
 
@@ -129,14 +132,14 @@ export default function Home() {
                 </div>
                 <div className="mt-5 text-justify">
                   Step into a world where your everyday moments become
-                  extraordinary. We're here to transform your bathroom into a
+                  extraordinary. We&apos;re here to transform your bathroom into a
                   stunning haven of luxury and practicality. Imagine designs
                   that catch your eye and flawless installations that turn each
-                  element into a work of art. We're not just about looks – we're
+                  element into a work of art. We&apos;re not just about looks – we&apos;re
                   about making your daily routines feel like indulgent
                   experiences. Our bathware services redefine what a truly
-                  exceptional bathroom should be. It's where style and quality
-                  meet to create a bathroom that's not just beautiful but also
+                  exceptional bathroom should be. It&apos;s where style and quality
+                  meet to create a bathroom that&apos;s not just beautiful but also
                   functional. Join us on a journey where your dream bathroom
                   becomes a reality, and every detail is perfected just for you.
                 </div>
@@ -163,9 +166,11 @@ export default function Home() {
           <div className="border-red-200 mt-5 col-span-3 justify-between lg:hidden grid sm:grid-cols-2 grid-cols-1">
             {STATICS.map((data, index) => {
               return (
-                <div className="flex justify-center items-center m-2 shadow rounded-2xl">
+                <div
+                  className="flex justify-center items-center m-2 shadow rounded-2xl"
+                  key={index}
+                >
                   <Counter
-                    key={index}
                     start={data.start}
                     end={data.end}
                     duration={data.duration}
@@ -183,4 +188,11 @@ export default function Home() {
       </section>
     </div>
   );
+}
+
+export async function generateMetadata({ params, searchParams }, parent) {
+  return {
+    title: `${openGraphImage.title} - Home`,
+    description: openGraphImage.description,
+  };
 }

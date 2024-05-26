@@ -1,6 +1,7 @@
-import React from "react";
+import { primaryMenu } from "@/data/data";
+import Image from "next/image";
 import Link from "next/link";
-import { primaryMenu, followUsMenu } from "@/data/data";
+import Logo from "../Logo";
 
 const Footer = () => {
   return (
@@ -10,10 +11,14 @@ const Footer = () => {
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
               <Link href="http://127.0.0.1:3000/" className="flex items-center">
-                <img src="/logo.png" className="w-12 h-auto mr-2" alt="logo" />
-                <span className="self-center text-2xl font-semibold whitespace-nowrap">
-                  Plumbing
-                </span>
+                <Image
+                  src="/logo.png"
+                  width={48}
+                  height={0}
+                  className="mr-2"
+                  alt="logo"
+                />
+                <Logo />
               </Link>
             </div>
             <div className="grid gap-8 sm:gap-6 grid-cols-2">
@@ -24,9 +29,8 @@ const Footer = () => {
                 <ul className="text-gray-500 font-medium">
                   {primaryMenu.map((item, index) => {
                     return (
-                      <li className="mb-3">
+                      <li className="mb-3" key={index}>
                         <Link
-                          key={index}
                           href={item.url}
                           aria-current="page"
                           className="hover:underline "

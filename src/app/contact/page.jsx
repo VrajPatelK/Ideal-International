@@ -1,8 +1,7 @@
-import React from "react";
-import Heading4 from "@/layouts/Heading4";
-import Card from "@/components/Card/page";
-import Container from "@/layouts/Container";
 import ContactForm from "@/components/ContactForm/ContactForm";
+import Container from "@/layouts/Container";
+import Heading4 from "@/layouts/Heading4";
+import { openGraphImage } from "../shared-metadata";
 
 const Contact = () => {
   return (
@@ -11,7 +10,7 @@ const Contact = () => {
         <section className="border-blue-500 bg-blue-50 shadow-md rounded-lg lg:grid lg:grid-cols-2 lg:gap-3 pt-12 pb-5 px-5">
           <div className="col-span-1 py-5 hidden lg:block">
             <div className="text-left font-bold xl:text-6xl text-5xl w-fit leading-tight">
-              Plumbing services we've got the fix!
+              Plumbing services we&apos;ve got the fix!
             </div>
             <div className="mt-5">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit
@@ -44,3 +43,10 @@ const Contact = () => {
 };
 
 export default Contact;
+
+export async function generateMetadata({ params, searchParams }, parent) {
+  return {
+    title: `${openGraphImage.title} - Contact Us`,
+    description: openGraphImage.description,
+  };
+}
