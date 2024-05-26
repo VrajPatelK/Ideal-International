@@ -1,21 +1,25 @@
 "use client";
+import { DEVELOPMENT_DOMAIN, DEVELOPMENT_ENV, ENV, PRODUCTION_DOMAIN } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import Logo from "../Logo";
 import Modal from "../Modal/Modal";
 import NavItems from "./NavItems";
-import Logo from "../Logo";
+
 
 const Navbar = () => {
   //
   const [displayNavbar, setDisplayNavbar] = useState(false);
+  const domain = ENV === DEVELOPMENT_ENV ? DEVELOPMENT_DOMAIN : PRODUCTION_DOMAIN;
+
 
   return (
     <div>
       <nav className="bg-white border-gray-200 w-full z-50 navbar-shadow">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 relative">
           <Link
-            href="http://127.0.0.1:3000/"
+            href={domain}
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <Image src="/logo.png" width={48} height={0} alt="logo" />

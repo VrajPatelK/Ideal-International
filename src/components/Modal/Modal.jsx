@@ -1,8 +1,11 @@
-import React from "react";
-import NavItems from "../Navbar/NavItems";
+import { DEVELOPMENT_DOMAIN, DEVELOPMENT_ENV, ENV, PRODUCTION_DOMAIN } from "@/constants";
 import Link from "next/link";
+import NavItems from "../Navbar/NavItems";
+
 Link;
 const Modal = (props) => {
+  const domain = ENV === DEVELOPMENT_ENV ? DEVELOPMENT_DOMAIN : PRODUCTION_DOMAIN;
+
   return (
     <div
       id="extralarge-modal"
@@ -55,8 +58,8 @@ const Modal = (props) => {
             <div className="sm:flex sm:items-center sm:justify-between">
               <span className="text-sm text-gray-100 sm:text-center">
                 <b>©</b> 2023{" "}
-                <Link href="http://127.0.0.1:3000/" className="hover:underline">
-                  [plumbing]™
+                <Link href={domain} className="hover:underline">
+                  Ideal International™
                 </Link>
                 . All Rights Reserved.
               </span>

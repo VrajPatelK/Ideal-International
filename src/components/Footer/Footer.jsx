@@ -1,16 +1,19 @@
+import { DEVELOPMENT_DOMAIN, DEVELOPMENT_ENV, ENV, PRODUCTION_DOMAIN } from "@/constants";
 import { primaryMenu } from "@/data/data";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "../Logo";
 
 const Footer = () => {
+  const domain = ENV === DEVELOPMENT_ENV ? DEVELOPMENT_DOMAIN : PRODUCTION_DOMAIN;
+
   return (
     <div>
       <footer className="bg-white">
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
-              <Link href="http://127.0.0.1:3000/" className="flex items-center">
+              <Link href={domain} className="flex items-center">
                 <Image
                   src="/logo.png"
                   width={48}
@@ -61,7 +64,7 @@ const Footer = () => {
           <div className="sm:flex sm:items-center sm:justify-between">
             <span className="text-sm text-gray-500 sm:text-center">
               © 2023{" "}
-              <Link href="http://127.0.0.1:3000/" className="hover:underline">
+              <Link href={domain} className="hover:underline">
                 [plumbing]™
               </Link>
               . All Rights Reserved.
