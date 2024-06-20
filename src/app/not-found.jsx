@@ -11,7 +11,7 @@ const NotFound = () => {
         Page Not Found.
       </h2>
       <p className="text-gray-600 mb-4">
-        Sorry, we can't find the page you're looking for.
+        Sorry, we can&apos;t find the page you&apos;re looking for.
       </p>
       <button
         onClick={() => router.push("/")}

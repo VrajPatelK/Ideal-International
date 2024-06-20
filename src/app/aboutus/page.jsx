@@ -24,7 +24,7 @@ const AboutUs = () => {
                 delivering top-notch bath-oriented services to transform your
                 bathroom into a modern, functional, and luxurious space. At{" "}
                 <CName />, we understand that your bathroom is more than just a
-                utility space; it's a sanctuary where you start and end your
+                utility space; it&apos;s a sanctuary where you start and end your
                 day. Our team of experienced professionals is dedicated to
                 providing personalized solutions that cater to your unique style
                 and requirements. From minor repairs to complete renovations, we

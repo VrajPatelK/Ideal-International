@@ -15,10 +15,10 @@ const Contact = () => {
               Plumbing services we&apos;ve got the fix!
             </div>
             <div className="mt-5 text-justify">
-              Whether it's a leaky faucet, a clogged drain, or a complete
+              Whether it&apos;s a leaky faucet, a clogged drain, or a complete
               plumbing overhaul, our team of experienced professionals is here
               to solve all your plumbing problems. With prompt service, quality
-              workmanship, and competitive rates, we're your trusted partner for
+              workmanship, and competitive rates, we&apos;re your trusted partner for
               all plumbing repairs, installations, and maintenance.
             </div>
           </div>

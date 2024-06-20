@@ -268,7 +268,7 @@ const termsAndConditions = [
         your understanding and cooperation. <CName /> will make every effort to
         communicate promptly and find suitable solutions to address the
         situation. We appreciate your flexibility and patience during such
-        unforeseen events,
+        unforeseen events.
       </>
     ),
   },
@@ -279,7 +279,7 @@ const termsAndConditions = [
         Effective communication is crucial for a successful partnership.{" "}
         <CName /> commits to keeping you informed throughout the service
         process. We encourage open dialogue, and our team is here to address any
-        queries or concerns you may have regarding your bathroom project.",
+        queries or concerns you may have regarding your bathroom project.
       </>
     ),
   },
@@ -290,7 +290,7 @@ const termsAndConditions = [
         Our services are provided on a project basis, and specific terms will be
         outlined in the agreement established between <CName /> and the client.
         These terms may include project timelines, costs, and any other relevant
-        details specific to the scope of work.",
+        details specific to the scope of work.
       </>
     ),
   },
@@ -301,7 +301,7 @@ const termsAndConditions = [
         <CName /> respects your privacy and treats all client information with
         utmost confidentiality. Any data shared with us during the course of our
         services will be handled securely and in compliance with applicable
-        privacy laws.",
+        privacy laws.
       </>
     ),
   },
@@ -312,7 +312,7 @@ const termsAndConditions = [
         Payment terms will be clearly communicated and agreed upon before the
         commencement of any project. <CName />
         accepts payments through the agreed-upon methods outlined in the service
-        agreement.",
+        agreement.
       </>
     ),
   },
@@ -322,7 +322,7 @@ const termsAndConditions = [
       <>
         <CName /> reserves the right to modify these terms and conditions at any
         time. Clients will be notified of any changes, and continued engagement
-        with our services implies acceptance of the updated terms.",
+        with our services implies acceptance of the updated terms.
       </>
     ),
   },
@@ -332,7 +332,7 @@ const termsAndConditions = [
       <>
         Either party may terminate the service agreement with reasonable notice.{" "}
         <CName /> retains the right to terminate services in the event of a
-        breach of terms by the client.",
+        breach of terms by the client.
       </>
     ),
   },
