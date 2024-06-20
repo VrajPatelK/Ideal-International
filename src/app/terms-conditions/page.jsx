@@ -1,8 +1,8 @@
 import CName from "@/components/CName";
 import ListItem from "@/components/ListItem/ListItem";
-import { termsAndConditions } from "@/data/data";
 import Container from "@/layouts/Container";
 import Heading4 from "@/layouts/Heading4";
+import { termsAndConditions } from "@/utils/data";
 import { Fragment } from "react";
 import { openGraphImage } from "../shared-metadata";
 
@@ -20,7 +20,7 @@ const TermsConditions = () => {
 
         <div className="my-4 py-4">
           <Container>
-            <div className="rounded-lg shadow bg-[#F9FAFB] p-10">
+            <div className="rounded-lg shadow bg-[#F9FAFB] py-10 sm:px-10 px-6">
               {termsAndConditions.map((tac, index) => {
                 return (
                   <Fragment key={index}>

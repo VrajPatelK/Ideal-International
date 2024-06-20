@@ -1,30 +1,18 @@
 "use client";
-import { DEVELOPMENT_DOMAIN, DEVELOPMENT_ENV, ENV, PRODUCTION_DOMAIN } from "@/constants";
-import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import Logo from "../Logo";
 import Modal from "../Modal/Modal";
 import NavItems from "./NavItems";
 
-
 const Navbar = () => {
   //
   const [displayNavbar, setDisplayNavbar] = useState(false);
-  const domain = ENV === DEVELOPMENT_ENV ? DEVELOPMENT_DOMAIN : PRODUCTION_DOMAIN;
-
 
   return (
     <div>
       <nav className="bg-white border-gray-200 w-full z-50 navbar-shadow">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 relative">
-          <Link
-            href={domain}
-            className="flex items-center space-x-3 rtl:space-x-reverse"
-          >
-            <Image src="/logo.png" width={48} height={0} alt="logo" />
-            <Logo />
-          </Link>
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4 xl:pl-0 pl-4 relative">
+          <Logo />
 
           <button
             data-collapse-toggle="navbar-default"

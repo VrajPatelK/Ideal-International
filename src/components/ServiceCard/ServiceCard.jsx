@@ -4,7 +4,7 @@ const ServiceCard = (props) => {
   return (
     <div
       className={
-        "card-shadow p-6 bg-white justify-self-stretch rounded-lg " +
+        "card-shadow p-6 bg-white justify-self-stretch rounded-lg w-full " +
         props.className
       }
     >
@@ -18,14 +18,12 @@ const ServiceCard = (props) => {
         />
       </div>
 
-      <a href="#">
-        <h5 className="mb-2 text-2xl font-semibold tracking-tight text-white">
-          {props.title}
-        </h5>
-      </a>
-      <p className="mb-3 font-normal text-gray-200">
-        {props.description}
-      </p>
+      <h5 className="mb-2 text-2xl font-semibold tracking-tight text-white">
+        {props.title}
+      </h5>
+      {props.description ? (
+        <p className="mb-3 font-normal text-gray-200">{props.description}</p>
+      ) : null}
     </div>
   );
 };

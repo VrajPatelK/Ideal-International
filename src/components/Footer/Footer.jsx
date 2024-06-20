@@ -1,30 +1,19 @@
-import { DEVELOPMENT_DOMAIN, DEVELOPMENT_ENV, ENV, PRODUCTION_DOMAIN } from "@/constants";
-import { primaryMenu } from "@/data/data";
-import Image from "next/image";
+import { DOMAIN } from "@/utils/constants";
+import { personalData, primaryMenu } from "@/utils/data";
 import Link from "next/link";
+import CName from "../CName";
 import Logo from "../Logo";
 
 const Footer = () => {
-  const domain = ENV === DEVELOPMENT_ENV ? DEVELOPMENT_DOMAIN : PRODUCTION_DOMAIN;
-
   return (
     <div>
       <footer className="bg-white">
-        <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div className="mx-auto w-full max-w-screen-xl py-6 lg:py-8 xl:px-0 px-4">
           <div className="md:flex md:justify-between">
-            <div className="mb-6 md:mb-0">
-              <Link href={domain} className="flex items-center">
-                <Image
-                  src="/logo.png"
-                  width={48}
-                  height={0}
-                  className="mr-2"
-                  alt="logo"
-                />
-                <Logo />
-              </Link>
+            <div className="md:mb-0 mb-5">
+              <Logo />
             </div>
-            <div className="grid gap-8 sm:gap-6 grid-cols-2">
+            <div className="grid gap-8 sm:gap-6 grid-cols">
               <div>
                 <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">
                   Useful links
@@ -45,40 +34,30 @@ const Footer = () => {
                   })}
                 </ul>
               </div>
-
-              <div>
-                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">
-                  Legal
-                </h2>
-                <ul className="text-gray-500 font-medium">
-                  <li className="mb-4">
-                    <Link href={primaryMenu[2].url} className="hover:underline">
-                      {primaryMenu[2].name}
-                    </Link>
-                  </li>
-                </ul>
-              </div>
             </div>
           </div>
           <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
           <div className="sm:flex sm:items-center sm:justify-between">
             <span className="text-sm text-gray-500 sm:text-center">
               © 2023{" "}
-              <Link href={domain} className="hover:underline">
-                [plumbing]™
+              <Link href={DOMAIN} className="hover:underline">
+                <CName />™
               </Link>
               . All Rights Reserved.
             </span>
             <div className="flex mt-4 sm:justify-center items-center sm:mt-0 gap-x-2">
               <Link
-                href="#"
+                href={personalData.MOBILE}
                 className="text-gray-500 hover:text-gray-900 border-r-2 pr-2"
               >
-                +91 99134 13030
+                {personalData.MOBILE}
               </Link>
 
-              <Link href="#" className="text-gray-500 hover:text-gray-900">
-                abc@123gmail.com
+              <Link
+                href={personalData.EMAIL}
+                className="text-gray-500 hover:text-gray-900"
+              >
+                {personalData.EMAIL}
               </Link>
             </div>
           </div>

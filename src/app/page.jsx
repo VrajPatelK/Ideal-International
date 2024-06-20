@@ -1,11 +1,11 @@
+import CName from "@/components/CName";
 import Counter from "@/components/Counter/Counter";
 import ServiceCard from "@/components/ServiceCard/ServiceCard";
 import Container from "@/layouts/Container";
 import Heading4 from "@/layouts/Heading4";
+import { STATICS } from "@/utils/data";
 import Image from "next/image";
 import Link from "next/link";
-
-import { STATICS } from "@/data/data";
 import home01 from "../../public/home-01.png";
 import home02 from "../../public/home-02.png";
 import { getServcies } from "./Helpers/helpers";
@@ -16,20 +16,19 @@ export default function Home() {
     <div>
       <section className="bg-blue-gradiant">
         <Container>
-          <div className="rounded-lg lg:grid lg:grid-cols-2 lg:gap-3 pt-12 pb-5 px-5">
+          <div className="rounded-lg lg:grid lg:grid-cols-2 lg:gap-3 pt-12 pb-5 pr-5">
             <div className="col-span-1 py-5 ml-auto">
               <div className="text-left font-bold sm:text-5xl text-2xl w-fit leading-tight">
                 Smart, Stylish,
                 <br />
                 <span className="text-blue-600">Sustainable</span>
               </div>
-              <div className="mt-5">
-                Redefining Bathware for Modern Living. Embrace the future of
-                bathrooms with our smart, stylish, and eco-friendly
-                solutions.Discover a range of styles and personalized solutions
-                that make every bathroom uniquely yours.From vision to reality,
-                our services redefine the art of bathing, focusing on your
-                comfort and style.
+              <div className="mt-5 text-justify">
+                Welcome to <CName /> - where innovation meets elegance, and
+                sustainability is at the core of everything we do. Our mission
+                is to transform your bathroom into a space that is not only
+                functional but also a reflection of your style and commitment to
+                the environment.
               </div>
               <div className="mt-5">
                 <Link href={"/contact"}>
@@ -132,16 +131,17 @@ export default function Home() {
                 </div>
                 <div className="mt-5 text-justify">
                   Step into a world where your everyday moments become
-                  extraordinary. We&apos;re here to transform your bathroom into a
-                  stunning haven of luxury and practicality. Imagine designs
+                  extraordinary. We&apos;re here to transform your bathroom into
+                  a stunning haven of luxury and practicality. Imagine designs
                   that catch your eye and flawless installations that turn each
-                  element into a work of art. We&apos;re not just about looks – we&apos;re
-                  about making your daily routines feel like indulgent
-                  experiences. Our bathware services redefine what a truly
-                  exceptional bathroom should be. It&apos;s where style and quality
-                  meet to create a bathroom that&apos;s not just beautiful but also
-                  functional. Join us on a journey where your dream bathroom
-                  becomes a reality, and every detail is perfected just for you.
+                  element into a work of art. We&apos;re not just about looks –
+                  we&apos;re about making your daily routines feel like
+                  indulgent experiences. Our bathware services redefine what a
+                  truly exceptional bathroom should be. It&apos;s where style
+                  and quality meet to create a bathroom that&apos;s not just
+                  beautiful but also functional. Join us on a journey where your
+                  dream bathroom becomes a reality, and every detail is
+                  perfected just for you.
                 </div>
               </div>
 

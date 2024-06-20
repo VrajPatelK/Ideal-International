@@ -1,4 +1,4 @@
-import React from "react";
+import CName from "../CName";
 
 const BlockQuote = (props) => {
   return (
@@ -19,9 +19,9 @@ const BlockQuote = (props) => {
       </blockquote>
       <figcaption className="flex items-center justify-center mt-6 space-x-3 rtl:space-x-reverse">
         <div className="flex items-center sm:flex-row flex-col sm:divide-x-2 rtl:divide-x-reverse sm:divide-blue-500 sm:border-none border-l-2 border-blue-500">
-          <cite className="pe-3 font-medium text-gray-900">Site Founder</cite>
+          <cite className="pe-3 font-medium text-gray-900">Harshad</cite>
           <cite className="ps-3 text-sm text-gray-500 capitalize">
-            at Ideal International
+            at <CName />
           </cite>
         </div>
       </figcaption>
