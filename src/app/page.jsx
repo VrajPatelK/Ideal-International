@@ -107,13 +107,13 @@ export default function Home() {
             We build stunning best handyman services agency
           </div>
 
-          <div className="grid gap-5 lg:grid-cols-2 xl:grid-cols-3 mt-10">
+          <div className="grid gap-5 lg:gap-5 lg:grid-cols-2 xl:grid-cols-3 mt-1">
             <div className="col-span-1 xl:block hidden">
               <Image
                 src={home02}
                 alt="home02"
                 width={0}
-                className="sm:h-[60vh] rounded-lg shadow-md mr-auto"
+                className="sm:h-[60vh] rounded-lg shadow-md w-full"
               />
             </div>
 

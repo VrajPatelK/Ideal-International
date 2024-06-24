@@ -1,4 +1,5 @@
 "use client";
+import Container from "@/layouts/Container";
 import { useState } from "react";
 import Logo from "../Logo";
 import Modal from "../Modal/Modal";
@@ -9,15 +10,15 @@ const Navbar = () => {
   const [displayNavbar, setDisplayNavbar] = useState(false);
 
   return (
-    <div>
+    <Container>
       <nav className="bg-white border-gray-200 w-full z-50 navbar-shadow">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4 xl:pl-0 pl-4 relative">
+        <div className="flex flex-wrap items-center justify-between mx-auto py-4 xl:pl-0 pl-4 relative">
           <Logo />
 
           <button
             data-collapse-toggle="navbar-default"
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
             aria-controls="navbar-default"
             aria-expanded="false"
             onClick={() => setDisplayNavbar((prev) => !prev)}
@@ -40,16 +41,16 @@ const Navbar = () => {
             </svg>
           </button>
 
-          <NavItems className="md:block hidden" onPageChange={() => {}} />
+          <NavItems className="lg:block hidden" onPageChange={() => {}} />
           {displayNavbar && (
             <Modal
-              className={`block md:hidden`}
+              className={`block lg:hidden`}
               onCloseModal={() => setDisplayNavbar(false)}
             />
           )}
         </div>
       </nav>
-    </div>
+    </Container>
   );
 };
 
