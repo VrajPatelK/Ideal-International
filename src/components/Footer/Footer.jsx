@@ -1,30 +1,20 @@
-import { DEVELOPMENT_DOMAIN, DEVELOPMENT_ENV, ENV, PRODUCTION_DOMAIN } from "@/constants";
-import { primaryMenu } from "@/data/data";
-import Image from "next/image";
+import Container from "@/layouts/Container";
+import { DOMAIN } from "@/utils/constants";
+import { personalData, primaryMenu } from "@/utils/data";
 import Link from "next/link";
+import CName from "../CName";
 import Logo from "../Logo";
 
 const Footer = () => {
-  const domain = ENV === DEVELOPMENT_ENV ? DEVELOPMENT_DOMAIN : PRODUCTION_DOMAIN;
-
   return (
-    <div>
+    <Container>
       <footer className="bg-white">
-        <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div className="mx-auto w-full py-6 lg:py-8 xl:px-0 px-4">
           <div className="md:flex md:justify-between">
-            <div className="mb-6 md:mb-0">
-              <Link href={domain} className="flex items-center">
-                <Image
-                  src="/logo.png"
-                  width={48}
-                  height={0}
-                  className="mr-2"
-                  alt="logo"
-                />
-                <Logo />
-              </Link>
+            <div className="md:mb-0 mb-5">
+              <Logo />
             </div>
-            <div className="grid gap-8 sm:gap-6 grid-cols-2">
+            <div className="grid gap-8 sm:gap-6 grid-cols">
               <div>
                 <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">
                   Useful links
@@ -45,46 +35,43 @@ const Footer = () => {
                   })}
                 </ul>
               </div>
-
-              <div>
-                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">
-                  Legal
-                </h2>
-                <ul className="text-gray-500 font-medium">
-                  <li className="mb-4">
-                    <Link href={primaryMenu[2].url} className="hover:underline">
-                      {primaryMenu[2].name}
-                    </Link>
-                  </li>
-                </ul>
-              </div>
             </div>
           </div>
-          <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
-          <div className="sm:flex sm:items-center sm:justify-between">
-            <span className="text-sm text-gray-500 sm:text-center">
-              © 2023{" "}
-              <Link href={domain} className="hover:underline">
-                [plumbing]™
-              </Link>
-              . All Rights Reserved.
-            </span>
-            <div className="flex mt-4 sm:justify-center items-center sm:mt-0 gap-x-2">
-              <Link
-                href="#"
-                className="text-gray-500 hover:text-gray-900 border-r-2 pr-2"
-              >
-                +91 99134 13030
-              </Link>
-
-              <Link href="#" className="text-gray-500 hover:text-gray-900">
-                abc@123gmail.com
-              </Link>
+          <hr className="my-6 sm:mx-auto lg:my-8" />
+          <div className="lg:flex lg:justify-between">
+            <div className="lg:mb-0 mb-2 sm:flex items-center justify-center">
+              <div className="flex justify-center">
+                <Link
+                  href={`https://wa.me/917575802028`}
+                  className="text-gray-500 hover:text-gray-900 sm:border-r-2 sm:pr-2"
+                  target="_blank"
+                >
+                  {personalData.MOBILE}
+                </Link>
+              </div>
+              <div className="flex justify-center">
+                <Link
+                  href={`mailto:${personalData.EMAIL}`}
+                  className="text-gray-500 hover:text-gray-900 sm:pl-2"
+                  target="_blank"
+                >
+                  {personalData.EMAIL}
+                </Link>
+              </div>
+            </div>
+            <div className="lg:block flex justify-center">
+              <span className="text-sm text-gray-500 sm:text-center">
+                © 2023{" "}
+                <Link href={DOMAIN} className="hover:underline">
+                  <CName />™
+                </Link>
+                . All Rights Reserved.
+              </span>
             </div>
           </div>
         </div>
       </footer>
-    </div>
+    </Container>
   );
 };
 

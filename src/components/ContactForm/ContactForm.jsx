@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import { sendWhatsappMsg } from "@/utils/helpers";
+import { useState } from "react";
 import SuccessAlertCard from "../Alerts/SuccessAlertCard";
 
-const ContactForm = () => {
+const ContactForm = ({ recieverMobileNumber, token }) => {
   //
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
@@ -24,20 +25,12 @@ const ContactForm = () => {
   };
 
   //
-  const sendWhatsappMessage = (textMessage) => {
-    // send msg
-    const url = `https://wa.me/918732937702?text=${textMessage}`;
-    window.open(url, "_blank").focus();
-  };
-
-  //
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // send msg
-    const textMessage = `*Name :* ${fname} ${lname}%0a*Email :* ${email}%0a*Phone :* ${mobile} %0a*Message :* ${msg} %0a`;
-    sendWhatsappMessage(textMessage);
-
+    const textMessage = `*Name :* ${fname} ${lname}\n*Email :* ${email}\n*Phone :* ${mobile}\n*Message :* ${msg}\n`;
+    sendWhatsappMsg(recieverMobileNumber, textMessage, token);
     //
     setFormDisplay(false);
   };
@@ -62,6 +55,7 @@ const ContactForm = () => {
                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                 placeholder=" "
                 onChange={changeHandler}
+                autoComplete="off"
                 required
               />
               <label
@@ -78,7 +72,9 @@ const ContactForm = () => {
                 id="floating_last_name"
                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                 placeholder=" "
+                variant="outlined"
                 onChange={changeHandler}
+                autoComplete="off"
                 required
               />
               <label
@@ -97,6 +93,7 @@ const ContactForm = () => {
               className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
               onChange={changeHandler}
+              autoComplete="off"
               required
             />
             <label
@@ -110,19 +107,20 @@ const ContactForm = () => {
           <div className="relative z-0 w-full mb-5 group my-2">
             <input
               type="tel"
-              pattern="[0-9]{5} [0-9]{5}"
+              pattern="[6-9]{1}[0-9]{4}[0-9]{5}"
               name="floating_phone"
               id="floating_phone"
               className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
               onChange={changeHandler}
+              autoComplete="off"
               required
             />
             <label
               htmlFor="floating_phone"
               className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
-              Phone number (xxxxx xxxxx)
+              Mobile number (9898989898)
             </label>
           </div>
 
@@ -133,6 +131,8 @@ const ContactForm = () => {
               className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
               onChange={changeHandler}
+              autoComplete="off"
+              rows={6}
               required
             ></textarea>
             <label

@@ -1,11 +1,9 @@
-import { DEVELOPMENT_DOMAIN, DEVELOPMENT_ENV, ENV, PRODUCTION_DOMAIN } from "@/constants";
+import { DOMAIN } from "@/utils/constants";
 import Link from "next/link";
+import CName from "../CName";
 import NavItems from "../Navbar/NavItems";
 
-Link;
 const Modal = (props) => {
-  const domain = ENV === DEVELOPMENT_ENV ? DEVELOPMENT_DOMAIN : PRODUCTION_DOMAIN;
-
   return (
     <div
       id="extralarge-modal"
@@ -20,9 +18,7 @@ const Modal = (props) => {
         <div className="relative bg-blue-600 rounded-lg">
           {/* <!-- Modal header --> */}
           <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t">
-            <h3 className="text-xl font-medium text-white">
-              Plumbing
-            </h3>
+            <h3 className="text-xl font-medium text-white">Plumbing</h3>
             <button
               type="button"
               className="text-white bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center"
@@ -58,8 +54,8 @@ const Modal = (props) => {
             <div className="sm:flex sm:items-center sm:justify-between">
               <span className="text-sm text-gray-100 sm:text-center">
                 <b>©</b> 2023{" "}
-                <Link href={domain} className="hover:underline">
-                  Ideal International™
+                <Link href={DOMAIN} className="hover:underline">
+                  <CName />™
                 </Link>
                 . All Rights Reserved.
               </span>

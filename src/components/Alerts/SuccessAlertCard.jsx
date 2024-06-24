@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 
 const SuccessAlertCard = (props) => {
   //
@@ -43,15 +42,6 @@ const SuccessAlertCard = (props) => {
             <path d="M10 0C4.612 0 0 5.336 0 7c0 1.742 3.546 7 10 7 6.454 0 10-5.258 10-7 0-1.664-4.612-7-10-7Zm0 10a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" />
           </svg>
           View Form
-        </button>
-        <button
-          type="button"
-          className="text-green-800 bg-transparent border border-green-800 hover:bg-green-900 hover:text-white focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center"
-          data-dismiss-target="#alert-additional-content-3"
-          aria-label="Close"
-          onClick={() => props.onChangeVisibility(true)}
-        >
-          Dismiss
         </button>
       </div>
     </div>

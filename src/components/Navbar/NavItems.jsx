@@ -1,9 +1,8 @@
 "use client";
 
-import { primaryMenu } from "@/data/data";
-import { usePathname } from "next/navigation";
+import { primaryMenu } from "@/utils/data";
 import Link from "next/link";
-import React from "react";
+import { usePathname } from "next/navigation";
 
 //
 const activeClass =

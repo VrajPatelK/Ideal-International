@@ -1,4 +1,6 @@
+import { personalData } from "@/utils/data";
+
 export const openGraphImage = {
-  title: "Ideal International",
+  title: personalData.COMPANY_NAME,
   description: [],
 };
